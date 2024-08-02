@@ -1,1 +1,17 @@
-
+name: 对服务器现有的玩法等问题
+description: 提出你的问题。
+labels: [questions]
+title: "[问题] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您给服务器提出建议！
+        为了使我们更好地帮助你，请提供以下信息
+        
+  - type: textarea
+    id: why
+    attributes:
+      label: 你认为存在的问题或缺陷
+    validations:
+      required: true
