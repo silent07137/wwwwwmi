@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        感谢给 QAuxiliary 汇报问题！
+        感谢给服务器汇报问题！
         为了使我们更好地帮助你，请提供以下信息。
   - type: textarea
     attributes:
@@ -26,31 +26,15 @@ body:
   - type: textarea
     attributes:
       label: Actual behaviour/实际行为
-      description: 如果含有截图，个人信息注意打码保护
+      description: 如果含有截图，个人信息注意打码保护，可以将mod列表截图上传
       placeholder: Tell us what happens instead/实际上发生了什么
     validations:
       required: true
 
   - type: input
     attributes:
-      label: Xposed Framework you used/你使用的Xposed框架
-    validations:
-      required: true
-  - type: input
-    attributes:
-      label: Your Android version/你使用的安卓系统版本
-    validations:
-      required: true
-  - type: input
-    attributes:
-      label: QQ(TIM)版本/QQ(TIM) Version
-      description: QQ(TIM)版本/QQ(TIM) Version
-    validations:
-      required: true
-  - type: input
-    attributes:
-      label: Module Version/模块版本
-      description: Don't use 'latest'. Specify actual version with 4 digits, otherwise your issue will be closed. Get the latest CI version from https://t.me/QAuxiliary_CI ./不要使用“最新版”。给出详细版本号，否则 issue 将被关闭。在 https://t.me/QAuxiliary_CI 获取最新 CI 版本。
+      label: Game Version/游戏版本
+      description: 请确保游戏版本为java1.20.1-1.20.4之间
     validations:
       required: true
   - type: checkboxes
@@ -58,24 +42,18 @@ body:
     attributes:
       label: Version and Other Requirements/版本和其他要求
       options:
-        - label: I am using latest debug CI version of QAuxiliary and enable verbose log/我正在使用最新 CI 调试版本且启用详细日志
+        - label: 我已确保我使用的版本为正式版且为1.20.1-1.20.4
           required: false
-        - label: The QQ I am using is an official release version, not a modified or beta version/我使用的 QQ 是官方发布的正式版本，而非修改版或测试版
+        - label: 我已确保游戏bug并非由我本地mod导致
           required: false
-        - label: 我已经在 [Issue Tracker](https://github.com/cinit/QAuxiliary/issues) 中找过我要提出的问题，没有找到相同问题。重复问题会被关闭。
-          required: true
-        - label: 我已知晓并同意，此处仅用于汇报主程序中存在的问题。若这个 Issue 是关于其他非程序本身问题，则我的 Issue 可能会被无条件自动关闭或/并锁定。
-          required: true
-        - label: 我已知晓并同意，如果我不按照模板提供的指示进行填写，则我的 Issue 可能会被无条件删除。
-          required: true
 
   - type: textarea
     attributes:
       label: Logs/日志
-      description: 功能问题请先复现一次错误，然后在 模块设置界面-故障排查-功能异常列表 找到存在问题的功能，复制错误信息粘贴到此处；激活问题请提供 [bugreport](https://developer.android.google.cn/studio/debug/bug-report?hl=zh-cn) 日志。无日志提交会被关闭。
-      placeholder: Paste logs here or upload logs by clicking the bar on the bottom. /将日志粘贴到此处或者点击文本框底栏上传日志文件。
+      description: 
+      placeholder: 可以在此上传日志文件(可选)
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: extra-desc
